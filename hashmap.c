@@ -64,10 +64,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     
     if(map -> buckets[pos] == NULL || map -> buckets[pos] -> key == NULL)
     {
-        Pair *nuevoElem = (Pair*)malloc(sizeof(Pair));
-        nuevoElem -> value = value;
-        nuevoElem -> key = key;
-        map -> Pair[pos] = nuevoElem;
+        createPair(key, value)
         map -> size += 1;
     }
     else
@@ -76,10 +73,7 @@ void insertMap(HashMap * map, char * key, void * value) {
         {
             pos += 1;
 
-            Pair *nuevoElem = (Pair*)malloc(sizeof(Pair));
-            nuevoElem -> value = value;
-            nuevoElem -> key = key;
-            map -> Pair[pos] = nuevoElem;
+            createPair(key, value)
             map -> size += 1;
         }
     }
