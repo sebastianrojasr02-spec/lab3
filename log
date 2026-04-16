@@ -1,0 +1,56 @@
+Thu Apr 16 08:01:25 PM UTC 2026: 
+ hashmap.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:63:15: error: implicit declaration of function ‘get_valid_location’ [-Wimplicit-function-declaration]
+   63 |     int pos = get_valid_location(map,key);
+      |               ^~~~~~~~~~~~~~~~~~
+hashmap.c:64:9: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘hashArray’
+   64 |     map -> hashArray[pos] = hash(key,capacity)
+      |         ^~
+hashmap.c:64:38: error: ‘capacity’ undeclared (first use in this function)
+   64 |     map -> hashArray[pos] = hash(key,capacity)
+      |                                      ^~~~~~~~
+hashmap.c:64:38: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:64:47: error: expected ‘;’ before ‘map’
+   64 |     map -> hashArray[pos] = hash(key,capacity)
+      |                                               ^
+      |                                               ;
+   65 | 
+   66 |     map -> hashArray[pos] -> key = key;
+      |     ~~~                                        
+hashmap.c:67:9: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘hashArray’
+   67 |     map -> hashArray[pos] -> value = value;
+      |         ^~
+hashmap.c:63:9: error: variable ‘pos’ set but not used [-Werror=unused-but-set-variable]
+   63 |     int pos = get_valid_location(map,key);
+      |         ^~~
+test.c:508:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  508 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:529:1: error: expected declaration or statement at end of input
+  529 | }
+      | ^
+test.c: At top level:
+test.c:508:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  508 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:218:5: error: ‘insert_test5’ defined but not used [-Werror=unused-function]
+  218 | int insert_test5(){ //factor de carga>0.7, se llama a función enlarge
+      |     ^~~~~~~~~~~~
+test.c:132:6: error: ‘compare_test’ defined but not used [-Werror=unused-function]
+  132 | void compare_test(){
+      |      ^~~~~~~~~~~~
+test.c:126:6: error: ‘hash_test3’ defined but not used [-Werror=unused-function]
+  126 | void hash_test3(){ //no random
+      |      ^~~~~~~~~~
+test.c:112:6: error: ‘hash_test2’ defined but not used [-Werror=unused-function]
+  112 | void hash_test2(){ // colisiones
+      |      ^~~~~~~~~~
+test.c:101:6: error: ‘hash_test1’ defined but not used [-Werror=unused-function]
+  101 | void hash_test1(){ // posición válida
+      |      ^~~~~~~~~~
+cc1: all warnings being treated as errors
+8ed6e54
