@@ -71,15 +71,14 @@ void insertMap(HashMap * map, char * key, void * value)
     }
     else
     {
-        while(map -> buckets[pos] != NULL || map -> buckets[pos] -> key == NULL)
+        while(map -> buckets[pos] != NULL || map -> buckets[pos] -> key != NULL)
         {
             pos += 1;
-
-            map->buckets[pos] = createPair(key, value);
-            map -> size += 1;
         }
+    map->buckets[pos] = createPair(key, value);
+    map -> size += 1;
     }
-    if(map -> size / map -> capacity > 0.7)
+    if(map -> capacity / (map -> size) >= map -> capacity * 0.7)
     {
         enlarge(map);
     }
