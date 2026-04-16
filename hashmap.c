@@ -60,7 +60,7 @@ HashMap * createMap(long capacity) {
 
 void insertMap(HashMap * map, char * key, void * value) {
 {
-    long pos = hash(key, map-> capacity);
+    long pos = hash(key, map -> capacity);
     
     if(map -> buckets[pos] == NULL || map -> buckets[pos] -> key == NULL)
     {
@@ -82,6 +82,10 @@ void insertMap(HashMap * map, char * key, void * value) {
             map -> Pair[pos] = nuevoElem;
             map -> size += 1;
         }
+    }
+    if(map -> size / map -> capacity >= 0.7)
+    {
+        enlarge(map);
     }
 }
 
