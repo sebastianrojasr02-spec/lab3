@@ -62,7 +62,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 {
     long pos = hash(key, map -> capacity);
     
-    if(map -> buckets[pos] == NULL || map -> buckets[pos] -> key == NULL)
+    if(map -> buckets[pos] == NULL)
     {
         createPair(key, value)
         map -> size += 1;
