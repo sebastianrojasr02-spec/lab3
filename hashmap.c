@@ -60,13 +60,27 @@ HashMap * createMap(long capacity) {
 
 void insertMap(HashMap * map, char * key, void * value) {
 {
-    int pos = get_valid_location(map,key);
-    map -> hashArray[pos] = hash(key,capacity)
+    long pos = hash(key, map-> capacity);
+    
+    if(hashMap -> buckets[pos] == NULL || hasMap -> buckets[pos] -> key == NULL)
+    {
+        Pair *nuevoElem = (Pair*)malloc(sizeof(Pair));
+        nuevoElem->value = value;
+        nuevoElem->key = key;
+        hashMap->Pair[pos] = nuevoElem;
+        map -> size += 1;
+    }
+    else
+    {
+        while(hashmap -> buckets[pos] != NULL || hasMap -> buckets[pos] -> key == NULL)
+            pos += 1;
 
-    map -> hashArray[pos] -> key = key;
-    map -> hashArray[pos] -> value = value;
-
-    map -> size += 1;
+            Pair *nuevoElem = (Pair*)malloc(sizeof(Pair));
+            nuevoElem->value = value;
+            nuevoElem->key = key;
+            hashMap->Pair[pos] = nuevoElem;
+            map -> size += 1;
+    }
 }
 
 
