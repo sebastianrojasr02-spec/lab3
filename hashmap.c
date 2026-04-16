@@ -83,7 +83,7 @@ void insertMap(HashMap * map, char * key, void * value) {
             map -> size += 1;
         }
     }
-    if(map -> size / map -> capacity >= 0.7)
+    if(map -> size / map -> capacity > 0.7)
     {
         enlarge(map);
     }
