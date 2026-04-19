@@ -77,6 +77,7 @@ void insertMap(HashMap *map, char *key, void *value)
         if (strcmp(map->buckets[pos]->key, key) == 0)
         {
             map->buckets[pos]->value = value;
+            map -> current = map->buckets[pos];
             return;
         }
 
@@ -85,6 +86,8 @@ void insertMap(HashMap *map, char *key, void *value)
 
     map->buckets[pos] = createPair(key, value);
     map->size++;
+    map -> current = map -> buckets[pos];
+    
 
     if ((float)map->size / map->capacity >= 0.7)
     {
@@ -114,7 +117,7 @@ Pair * searchMap(HashMap * map,  char * key) {
         
         if(pos == map -> capacity)
         {
-            pos = (pos) % map -> capacity;
+            pos = pos % map -> capacity;
         }
         pos += 1;
         
@@ -144,7 +147,7 @@ void eraseMap(HashMap * map,  char * key)
         }
         if(pos == map -> capacity)
         {
-            pos = 0;
+            pos = pos % map -> capacity;
         }
         pos += 1;
         if (pos == start) break;
