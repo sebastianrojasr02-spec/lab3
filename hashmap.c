@@ -77,7 +77,7 @@ void insertMap(HashMap *map, char *key, void *value)
         if (strcmp(map->buckets[pos]->key, key) == 0)
         {
             map->buckets[pos]->value = value;
-            map -> current = map->buckets[pos];
+            map -> current = pos;
             return;
         }
 
@@ -86,7 +86,7 @@ void insertMap(HashMap *map, char *key, void *value)
 
     map->buckets[pos] = createPair(key, value);
     map->size++;
-    map -> current = map -> buckets[pos];
+    map -> current = pos;
     
 
     if ((float)map->size / map->capacity >= 0.7)
