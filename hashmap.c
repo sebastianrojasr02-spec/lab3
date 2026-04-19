@@ -163,7 +163,6 @@ Pair * firstMap(HashMap * map)
     {
         pos += 1;
     }
-    
     if(map -> buckets[pos] -> key != NULL) return map -> buckets[pos];
     
     return NULL;
