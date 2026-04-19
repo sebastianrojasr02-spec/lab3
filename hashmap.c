@@ -144,7 +144,7 @@ void eraseMap(HashMap * map,  char * key)
         }
         if(pos == map -> capacity)
         {
-            pos = (pos + 1) % map -> capacity;
+            pos = 0;
         }
         pos += 1;
         if (pos == start) break;
