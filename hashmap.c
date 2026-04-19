@@ -111,7 +111,7 @@ Pair * searchMap(HashMap * map,  char * key) {
             return map -> buckets[pos];
         }
         
-        if(pos = map -> capacity)
+        if(pos == map -> capacity)
         {
             pos = 0;
         }
