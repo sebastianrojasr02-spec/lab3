@@ -161,10 +161,10 @@ Pair * firstMap(HashMap * map)
     
     while(map -> buckets[pos] == NULL)
     {
+        if(map -> buckets[pos] -> key != NULL) return map -> buckets[pos];
         if(pos == map -> capacity) pos = 0;
         pos += 1;
     }
-    if(map -> buckets[pos] -> key != NULL) return map -> buckets[pos];
     
     return NULL;
 }
