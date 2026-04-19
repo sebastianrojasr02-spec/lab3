@@ -550,3 +550,14 @@ hashmap.c:117:39: error: expected ‘;’ before ‘}’ token
   118 |         }
       |         ~                              
 02e1809
+Sun Apr 19 03:01:02 AM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:117:31: error: ‘capacity’ undeclared (first use in this function)
+  117 |             pos = (pos + 1) % capacity;
+      |                               ^~~~~~~~
+hashmap.c:117:31: note: each undeclared identifier is reported only once for each function it appears in
+e817e00
