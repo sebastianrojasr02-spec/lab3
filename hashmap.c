@@ -114,7 +114,7 @@ Pair * searchMap(HashMap * map,  char * key) {
         
         if(pos == map -> capacity)
         {
-            pos = (pos + 1) % capacity;
+            pos = (pos + 1) % map -> capacity;
         }
         if (pos == start) break;
     }

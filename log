@@ -570,3 +570,9 @@ hashmap.c:117:31: error: ‘capacity’ undeclared (first use in this function)
       |                               ^~~~~~~~
 hashmap.c:117:31: note: each undeclared identifier is reported only once for each function it appears in
 797637d
+Sun Apr 19 03:08:09 AM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  6|4
+total_score: 20/60
+289900e
