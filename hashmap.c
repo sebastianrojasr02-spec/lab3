@@ -102,10 +102,11 @@ void insertMap(HashMap *map, char *key, void *value)
 
 Pair * searchMap(HashMap * map,  char * key) {   
     long pos = hash(key, map->capacity);
+    long start = pos;
 
-    while (map -> buckets[pos] -> value == NULL)
+    while (map -> buckets[pos] -> value != NULL)
     {
-        if(strcmp(map->buckets[pos]->key, key) == 1)
+        if(strcmp(map->buckets[pos]->key, key) == 0)
         {
             map -> current = pos;
             return map -> buckets[pos];
@@ -113,8 +114,9 @@ Pair * searchMap(HashMap * map,  char * key) {
         
         if(pos == map -> capacity)
         {
-            pos = 0;
+            pos = (pos + 1) % capacity
         }
+        if (pos == start) break;
     }
     return NULL;
 }
