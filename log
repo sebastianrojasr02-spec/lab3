@@ -618,3 +618,16 @@ hashmap.c:158:8: note: declared here
   158 | Pair * firstMap(HashMap * map)
       |        ^~~~~~~~
 bf6b285
+Sun Apr 19 03:02:31 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:166:36: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+  166 |         if(pos == map -> capacity) return;
+      |                                    ^~~~~~
+hashmap.c:158:8: note: declared here
+  158 | Pair * firstMap(HashMap * map)
+      |        ^~~~~~~~
+da3e2b2

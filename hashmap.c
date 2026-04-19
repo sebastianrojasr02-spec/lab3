@@ -157,7 +157,7 @@ void eraseMap(HashMap * map,  char * key)
 
 Pair * firstMap(HashMap * map) 
 {
-    pos = 0;
+    long pos = 0;
     
     while(map -> buckets[pos] -> key == NULL)
     {
