@@ -155,8 +155,20 @@ void eraseMap(HashMap * map,  char * key)
 // Pair * nextMap(HashMap * map) retorna el siguiente Pair del arreglo buckets a partir índice current. 
 // Recuerde actualizar el índice.
 
-Pair * firstMap(HashMap * map) {
+Pair * firstMap(HashMap * map) 
+{
+    pos = 0;
+    
+    while(map -> buckets[pos] -> key == NULL)
+    {
+        if(map -> buckets[pos] -> key != NULL) return map -> buckets[pos];
+        
+        if(pos == map -> capacity) return;
 
+        pos += 1;
+    }
+
+        
     return NULL;
 }
 
