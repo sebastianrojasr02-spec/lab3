@@ -104,7 +104,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     long pos = hash(key, map->capacity);
     long start = pos;
 
-    while (map -> buckets[pos] -> value != NULL)
+    while (map -> buckets[pos] != NULL)
     {
         if(strcmp(map->buckets[pos]->key, key) == 0)
         {
@@ -116,6 +116,8 @@ Pair * searchMap(HashMap * map,  char * key) {
         {
             pos = (pos + 1) % map -> capacity;
         }
+        pos += 1;
+        
         if (pos == start) break;
     }
     return NULL;
