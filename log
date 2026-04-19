@@ -637,3 +637,34 @@ Sun Apr 19 03:03:17 PM UTC 2026:
  tests:  11|2
 total_score: 40/60
 9f73fd7
+Sun Apr 19 03:04:49 PM UTC 2026: 
+ hashmap.c | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:163:5: error: expected expression before ‘}’ token
+  163 |     }
+      |     ^
+hashmap.c: At top level:
+hashmap.c:164:13: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘+=’ token
+  164 |         pos += 1;
+      |             ^~
+hashmap.c:165:5: error: expected identifier or ‘(’ before ‘}’ token
+  165 |     }
+      |     ^
+hashmap.c:166:5: error: expected identifier or ‘(’ before ‘if’
+  166 |     if(map -> buckets[pos] -> key != NULL) return map -> buckets[pos];
+      |     ^~
+hashmap.c:168:5: error: expected identifier or ‘(’ before ‘return’
+  168 |     return NULL;
+      |     ^~~~~~
+hashmap.c:169:1: error: expected identifier or ‘(’ before ‘}’ token
+  169 | }
+      | ^
+hashmap.c: In function ‘firstMap’:
+hashmap.c:163:5: error: control reaches end of non-void function [-Werror=return-type]
+  163 |     }
+      |     ^
+cc1: all warnings being treated as errors
+94094bb
