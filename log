@@ -738,3 +738,14 @@ Sun Apr 19 03:19:41 PM UTC 2026:
  tests:  12|2
 total_score: 40/60
 ef886f6
+Sun Apr 19 03:20:49 PM UTC 2026: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:167:65: error: comparison between pointer and integer [-Werror]
+  167 |         if (map->buckets[pos] != NULL && map->buckets[pos]->key != -1)
+      |                                                                 ^~
+cc1: all warnings being treated as errors
+909db63
