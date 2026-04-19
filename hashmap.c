@@ -159,7 +159,7 @@ Pair * firstMap(HashMap * map)
 {
     long pos = 0;
     
-    while(map -> buckets[pos] -> key == NULL)
+    while(map -> buckets[pos] == NULL)
     {
         if(pos == map -> capacity) pos = 0;
         pos += 1;
