@@ -230,8 +230,6 @@ void enlarge(HashMap * map) {
             insertMap(map, old_buckets[i]->key, old_buckets[i]->value);
         }
     }
-
-    
     free(old_buckets);
 }
 
