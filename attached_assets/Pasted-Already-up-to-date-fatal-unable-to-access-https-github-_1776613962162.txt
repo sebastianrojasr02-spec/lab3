@@ -1,0 +1,55 @@
+Already up to date.
+fatal: unable to access 'https://github.com/sebastianrojasr02-spec/lab3/': URL rejected: Malformed input to a URL function
+~/workspace$     enlarge_called = 1; // no borrar
+bash: enlarge_called: command not found
+bash: //: Is a directory
+~/workspace$ 
+~/workspace$     // a) guardar arreglo antiguo
+bash: syntax error near unexpected token `)'
+~/workspace$     Pair **old_buckets = map->buckets;
+bash: Pair: command not found
+~/workspace$     long old_capacity = map->capacity;
+bash: long: command not found
+~/workspace$ 
+~/workspace$     // b) duplicar capacidad
+bash: syntax error near unexpected token `)'
+~/workspace$     map->capacity *= 2;
+bash: map-: command not found
+~/workspace$ 
+~/workspace$     // c) crear nuevo arreglo
+bash: syntax error near unexpected token `)'
+~/workspace$     map->buckets = (Pair**) malloc(sizeof(Pair*) * map->capacity);
+bash: syntax error near unexpected token `('
+~/workspace$ 
+~/workspace$     // inicializar en NULL
+bash: //: Is a directory
+~/workspace$     for (long i = 0; i < map->capacity; i++) {
+bash: syntax error near unexpected token `('
+~/workspace$         map->buckets[i] = NULL;
+bash: map-: command not found
+~/workspace$     }
+bash: syntax error near unexpected token `}'
+~/workspace$ 
+~/workspace$     // d) reiniciar size
+bash: syntax error near unexpected token `)'
+~/workspace$     map->size = 0;
+bash: map-: command not found
+~/workspace$ 
+~/workspace$     // e) reinsertar elementos válidos
+bash: syntax error near unexpected token `)'
+~/workspace$     for (long i = 0; i < old_capacity; i++) {
+bash: syntax error near unexpected token `('
+~/workspace$         if (old_buckets[i] != NULL && old_buckets[i]->key != NULL) {
+bash: syntax error near unexpected token `{'
+~/workspace$             insertMap(map, old_buckets[i]->key, old_buckets[i]->value);
+bash: syntax error near unexpected token `map,'
+~/workspace$         }
+bash: syntax error near unexpected token `}'
+~/workspace$     }
+bash: syntax error near unexpected token `}'
+~/workspace$ 
+~/workspace$     // liberar arreglo antiguo (no los Pair, porque los reutilizaste lógicamente)
+bash: syntax error near unexpected token `('
+~/workspace$     free(old_buckets);
+bash: syntax error near unexpected token `old_buckets'
+~/workspace$ }
